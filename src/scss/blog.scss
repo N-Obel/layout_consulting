@@ -1,0 +1,87 @@
+//========================================================================================================================================================
+// --BLOG-MAIN-- == --MAIN-BLOCK--
+//========================================================================================================================================================
+
+.main-block {
+	// .main-block__content
+	&__content {
+		.page__blog-main & {
+			@include adaptiveValue("padding-top", 142, 50, 0, 1500, 767.98);
+			@include adaptiveValue("padding-bottom", 148, 50, 0, 1500, 767.98);
+			@include adaptiveValue("padding-left", 173, 20, 0, 1500, 767.98);
+			@include adaptiveValue("padding-right", 132, 20, 0, 1500, 767.98);
+		}
+	}
+}
+
+//========================================================================================================================================================
+// --BLOG-NEWS-- ==
+//========================================================================================================================================================
+
+.blog-news {
+	@include adaptiveValue("padding-top", 150, 40, 0, 1500, 991.98);
+	@include adaptiveValue("padding-bottom", 150, 40, 0, 1500, 991.98);
+	// .blog-news__container
+	&__container {
+	}
+	// .blog-news__header
+	&__header {
+		text-align: center;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 47, 25, 0, 1500, 767.98);
+		}
+	}
+	// .blog-news__label
+	&__label {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 16, 10, 0, 1500, 767.98);
+		}
+	}
+	// .blog-news__title
+	&__title {
+	}
+	// .blog-news__items
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		@include adaptiveValue("gap", 36, 20, 0, 1500, 991.98);
+		@media (max-width: $mobile) {
+			grid-template-columns: auto;
+		}
+	}
+	// .blog-news__item
+	&__item {
+	}
+}
+
+.label-item {
+	// .label-item__date
+	&__date {
+		.blog-news__items & {
+			@include adaptiveValue("font-size", 18, 16, 0, 1500, 991.98);
+			@media (max-width: $tablet) {
+				padding: toRem(10) toRem(0);
+			}
+		}
+	}
+	// .label-item__name
+	&__name {
+		.blog-news__items & {
+			@include adaptiveValue("font-size", 18, 16, 0, 1500, 991.98);
+			@media (max-width: $tablet) {
+				padding: toRem(10) toRem(0);
+			}
+		}
+	}
+	// .label-item__descr
+	&__descr {
+		.blog-news__items & {
+			@include adaptiveValue("font-size", 18, 16, 0, 1500, 991.98);
+			@media (max-width: $tablet) {
+				padding: toRem(10) toRem(0);
+			}
+		}
+	}
+}
+
+//========================================================================================================================================================

@@ -1,0 +1,86 @@
+//========================================================================================================================================================
+
+.license {
+	@include adaptiveValue("padding-top", 150, 40, 0, 1500, 767.98);
+	@include adaptiveValue("padding-bottom", 150, 40, 0, 1500, 767.98);
+	// .license__container
+	&__container {
+	}
+	// .license__header
+	&__header {
+		text-align: center;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 70, 35, 0, 1500, 767.98);
+		}
+	}
+	// .license__label
+	&__label {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 16, 10, 0, 1500, 767.98);
+		}
+	}
+	// .license__title
+	&__title {
+	}
+	// .license__body
+	&__body {
+		display: grid;
+		@include adaptiveValue("gap", 100, 30, 0, 1500, 767.98);
+	}
+	// .license__row
+	&__row {
+	}
+	// .license__descr
+	&__descr {
+		color: $titleColor;
+		font-family: "Poppins";
+		@include adaptiveValue("font-size", 40, 26, 0, 1500, 991.98);
+		font-weight: 700;
+		line-height: 121%;
+		text-transform: capitalize;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 10, 5, 0, 1500, 767.98);
+		}
+	}
+	// .license__text
+	&__text {
+		@include adaptiveValue("font-size", 18, 16, 0, 1500, 991.98);
+		line-height: 147%;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 32, 15, 0, 1500, 767.98);
+		}
+		span {
+			color: $greenColor;
+		}
+	}
+	// .license__info
+	&__info {
+		color: $titleColor;
+		font-family: "Poppins";
+		@include adaptiveValue("font-size", 30, 20, 0, 1500, 991.98);
+		font-weight: 700;
+		line-height: 150%;
+		text-transform: capitalize;
+		// p {
+		// 	@include adaptiveValue("font-size", 30, 20, 0, 1500, 991.98);
+		// 	font-weight: 400;
+		// 	color: $greenColor;
+		// }
+
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 24, 15, 0, 1500, 767.98);
+		}
+		span {
+			@include adaptiveValue("font-size", 30, 20, 0, 1500, 991.98);
+			font-weight: 400;
+			color: $greenColor;
+		}
+		p {
+			&:not(:last-child) {
+				margin-bottom: toRem(8);
+			}
+		}
+	}
+}
+
+//========================================================================================================================================================

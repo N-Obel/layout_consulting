@@ -1,0 +1,231 @@
+//========================================================================================================================================================
+// --PRICING-- == --MAIN-BLOCK--
+//========================================================================================================================================================
+
+.main-block {
+	// .main-block__content
+	&__content {
+		.page__pricing & {
+			@include adaptiveValue("padding-top", 142, 50, 0, 1500, 767.98);
+			@include adaptiveValue("padding-bottom", 142, 50, 0, 1500, 767.98);
+			@include adaptiveValue("padding-left", 173, 20, 0, 1500, 767.98);
+			@include adaptiveValue("padding-right", 132, 20, 0, 1500, 767.98);
+		}
+	}
+	// .main-block__label
+	&__label {
+	}
+	// .main-block__title
+	&__title {
+	}
+	// .main-block__image
+	&__image {
+		.page__pricing & {
+			object-position: center;
+		}
+	}
+}
+
+//========================================================================================================================================================
+// --PLANS--
+//========================================================================================================================================================
+
+.plans {
+	@include adaptiveValue("padding-top", 150, 40, 0, 1500, 991.98);
+	@include adaptiveValue("padding-bottom", 150, 40, 0, 1500, 991.98);
+	// .plans__container
+	&__container {
+	}
+	// .plans__header
+	&__header {
+		text-align: center;
+		&:not(:last-child) {
+			margin-bottom: toRem(92);
+			@media (max-width: $mobileSmall) {
+				margin-bottom: toRem(30);
+			}
+		}
+	}
+	// .plans__label
+	&__label {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 16, 10, 0, 1500, 991.98);
+		}
+	}
+	// .plans__title
+	&__title {
+	}
+	// .plans__items
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		@include adaptiveValue("gap", 31, 15, 0, 1500, 991.98);
+		@media (max-width: $mobile) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (max-width: $mobileSmall) {
+			grid-template-columns: auto;
+		}
+	}
+	// .plans__item
+	&__item {
+	}
+}
+
+.item-plans {
+	text-align: center;
+	padding: toRem(47) toRem(31);
+	background-color: #f4f4f4;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	@media (min-width: $mobile) {
+		&:first-child {
+			@include adaptiveValue("margin-bottom", 74, 40, 0, 1500, 991.98);
+		}
+	}
+	@media (max-width: $mobileSmall) {
+		&:first-child {
+			margin-bottom: toRem(50);
+		}
+	}
+	@media (max-width: em(1050)) {
+		padding: toRem(20);
+	}
+	@media (max-width: $mobileSmall) {
+		padding: toRem(10);
+	}
+	// .item-plans--purple
+	&--purple {
+		background-color: $purpleColor;
+		color: $whiteColor;
+	}
+	// .item-plans__content
+	&__content {
+		flex: 1 1 100%;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 34, 20, 0, 1500, 991.98);
+		}
+	}
+	// .item-plans__price
+	&__price {
+		padding: toRem(23) toRem(0);
+		border-top: toRem(1) solid #d3d3d3;
+		border-bottom: toRem(1) solid #d3d3d3;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 34, 20, 0, 1500, 991.98);
+		}
+	}
+	// .item-plans__descr
+	&__descr {
+		color: $titleColor;
+		font-family: "Poppins";
+		@include adaptiveValue("font-size", 30, 22, 0, 1500, 991.98);
+		font-weight: 700;
+		line-height: 110%;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 25, 15, 0, 1500, 991.98);
+		}
+		.item-plans--purple & {
+			color: $whiteColor;
+		}
+	}
+	// .item-plans__title
+	&__title {
+		color: $titleColor;
+		font-family: "Poppins";
+		@include adaptiveValue("font-size", 40, 26, 0, 1500, 991.98);
+		font-weight: 700;
+		line-height: 110%;
+		span {
+			@include adaptiveValue("font-size", 20, 16, 0, 1500, 991.98);
+		}
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 23, 15, 0, 1500, 991.98);
+		}
+		.item-plans--purple & {
+			color: $whiteColor;
+		}
+	}
+	// .item-plans__link
+	&__link {
+		padding: toRem(7) toRem(32);
+		color: #208068;
+		line-height: 157%;
+		background-color: $greenColor;
+		transition: all 0.3s;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: #4afccf;
+			}
+		}
+		.item-plans--purple & {
+			color: $purpleColor;
+			background-color: $whiteColor;
+			@media (any-hover: hover) {
+				&:hover {
+					background-color: #4afccf;
+				}
+			}
+		}
+		@media (min-width: $mobileSmall) and (max-width: $tablet) {
+			padding: toRem(10);
+		}
+		@media (max-width: $mobileSmall) {
+			width: 100%;
+		}
+	}
+	// .item-plans__text
+	&__text {
+		line-height: 135%;
+		span {
+			color: $titleColor;
+			@include adaptiveValue("font-size", 18, 16, 0, 1500, 991.98);
+			font-weight: 700;
+			line-height: 135%;
+		}
+		p {
+			&:not(:last-child) {
+				@include adaptiveValue("margin-bottom", 20, 10, 0, 1500, 991.98);
+			}
+		}
+	}
+	// .item-plans__button
+	&__button {
+		@media (max-width: $mobileSmall) {
+			width: 100%;
+		}
+		align-self: center;
+		.item-plans--purple & {
+			color: $purpleColor;
+			background-color: $whiteColor;
+			border: toRem(1) solid transparent;
+			@media (any-hover: hover) {
+				&:hover {
+					color: $whiteColor;
+					border: toRem(1) solid $whiteColor;
+					background-color: $purpleColor;
+				}
+			}
+		}
+	}
+	// .item-plans__subtitle
+	&__subtitle {
+		padding: toRem(10) toRem(30);
+		width: 100%;
+		background-color: $greenColor;
+		position: absolute;
+		height: toRem(50);
+		bottom: 100%;
+		left: 0;
+		color: #fff;
+		text-align: center;
+		font-family: "Poppins";
+		font-size: toRem(20);
+		//@include adaptiveValue("font-size", 20, 16, 0, 1500, 991.98);
+		font-weight: 600;
+		line-height: 150%;
+	}
+}
+
+//========================================================================================================================================================

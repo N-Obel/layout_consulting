@@ -1,0 +1,26 @@
+.changelog {
+	@include adaptiveValue("padding-top", 123, 50, 0, 1500, 767.98);
+	@include adaptiveValue("padding-bottom", 143, 50, 0, 1500, 767.98);
+	// .changelog__container
+	&__container {
+	}
+	// .changelog__header
+	&__header {
+		text-align: center;
+	}
+	// .changelog__label
+	&__label {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 16, 10, 0, 1500, 767.98);
+		}
+	}
+	// .changelog__title
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: toRem(10);
+		}
+	}
+	// .changelog__text
+	&__text {
+	}
+}

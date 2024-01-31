@@ -1,0 +1,168 @@
+//========================================================================================================================================================
+// --FAQ-- == --MAIN-BLOCK--
+//========================================================================================================================================================
+
+.main-block {
+	// .main-block__content
+	&__content {
+		.page__faq & {
+			@include adaptiveValue("padding-top", 142, 50, 0, 1500, 767.98);
+			@include adaptiveValue("padding-bottom", 148, 50, 0, 1500, 767.98);
+			@include adaptiveValue("padding-left", 173, 20, 0, 1500, 767.98);
+			@include adaptiveValue("padding-right", 104, 20, 0, 1500, 767.98);
+		}
+	}
+}
+
+//========================================================================================================================================================
+// --QUESTIONS--
+//========================================================================================================================================================
+
+.questions {
+	@include adaptiveValue("padding-top", 150, 40, 0, 1500, 767.98);
+	@include adaptiveValue("padding-bottom", 150, 40, 0, 1500, 767.98);
+	// .questions__container
+	&__container {
+	}
+	// .questions__body
+	&__body {
+	}
+	// .questions__tabs
+	&__tabs {
+	}
+}
+
+.tabs {
+	display: flex;
+	@include adaptiveValue("gap", 51, 20, 0, 1500, 991.98);
+	align-items: flex-start;
+	@media (max-width: $mobile) {
+		flex-direction: column;
+	}
+	// .tabs__menu
+	&__menu {
+		width: 100%;
+		background-color: #f4f4f4;
+		padding: toRem(20);
+		@media (min-width: $tablet) {
+			padding: toRem(56) toRem(35);
+		}
+		@media (min-width: $mobile) {
+			flex: 0 0 percent(359, 1220);
+		}
+	}
+	// .tabs__navigation
+	&__navigation {
+		display: flex;
+		flex-direction: column;
+		@media (max-width: $mobile) {
+			flex-direction: row;
+			column-gap: toRem(15);
+			row-gap: toRem(5);
+		}
+		@media (max-width: $mobile) {
+			justify-content: space-between;
+			flex-wrap: wrap;
+		}
+	}
+	// .tabs__descr
+	&__descr {
+		color: $titleColor;
+		font-family: "Poppins";
+		@include adaptiveValue("font-size", 25, 20, 0, 1500, 991.98);
+		font-weight: 600;
+		line-height: 127%;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 24, 15, 0, 1500, 767.98);
+		}
+		// @media (max-width:$tablet){
+		// 	text-align: center;
+		// }
+	}
+	// .tabs__title
+	&__title {
+		text-align: left;
+		padding: toRem(14) toRem(20);
+		color: $titleColor;
+		font-family: "Poppins";
+		@include adaptiveValue("font-size", 20, 16, 0, 1500, 767.98);
+		line-height: 127%;
+		&._tab-active {
+			color: $whiteColor;
+			background-color: $purpleColor;
+		}
+		@media (max-width: $tablet) {
+			padding: toRem(15);
+			margin: 0 toRem(-20);
+		}
+		@media (max-width: $mobile) {
+			margin: 0;
+			padding: toRem(10);
+		}
+	}
+	// .tabs__content
+	&__content {
+		width: 100%;
+		@media (min-width: $mobile) {
+			flex: 0 0 percent(810, 1220);
+		}
+	}
+	// .tabs__body
+	&__body {
+	}
+	// .tabs__items
+	&__items {
+		display: flex;
+		flex-direction: column;
+		@include adaptiveValue("gap", 32, 10, 0, 1500, 767.98);
+	}
+	// .tabs__item
+	&__item {
+		padding: toRem(15);
+		border: toRem(1) solid #e3e3e3;
+		@media (min-width: $tablet) {
+			padding: toRem(25) toRem(30);
+		}
+	}
+}
+
+.item-tab {
+	// .item-tab__title
+	&__title {
+		cursor: pointer;
+		list-style: none;
+		color: $titleColor;
+		font-family: "Poppins";
+		@include adaptiveValue("font-size", 20, 18, 0, 1500, 991.98);
+		font-weight: 600;
+		line-height: 150%;
+		display: flex;
+		justify-content: space-between;
+		gap: toRem(20);
+		transition: all 0.5s;
+		&::after {
+			content: "";
+			align-self: center;
+			width: toRem(20);
+			height: toRem(20);
+			flex: 0 0 toRem(20);
+			background: url("@img/others/ar_down.svg") center no-repeat;
+			transition: all 0.5s;
+		}
+		&._spoller-active {
+			&::after {
+				transform: rotate(-180deg);
+			}
+			&.item-tab__title {
+				margin-bottom: toRem(10);
+			}
+		}
+	}
+	// .item-tab__body
+	&__body {
+		@include adaptiveValue("font-size", 18, 16, 0, 1500, 991.98);
+		line-height: 147%;
+	}
+}
+
+//========================================================================================================================================================

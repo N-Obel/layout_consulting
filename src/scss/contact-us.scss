@@ -1,0 +1,214 @@
+//========================================================================================================================================================
+// --CONTACT-US-- == --MAIN-BLOCK--
+//========================================================================================================================================================
+
+.main-block {
+	// .main-block__content
+	&__content {
+		.page__contact-us & {
+			@include adaptiveValue("padding-top", 142, 50, 0, 1500, 767.98);
+			@include adaptiveValue("padding-bottom", 214, 50, 0, 1500, 767.98);
+			@include adaptiveValue("padding-left", 173, 20, 0, 1500, 767.98);
+			@include adaptiveValue("padding-right", 90, 20, 0, 1500, 767.98);
+		}
+	}
+}
+
+//========================================================================================================================================================
+// --GET-IN-TOUCH--
+//========================================================================================================================================================
+
+.get-in-touch {
+	@include adaptiveValue("padding-top", 150, 40, 0, 1500, 767.98);
+	@include adaptiveValue("padding-bottom", 100, 40, 0, 1500, 767.98);
+	// .get-in-touch__container
+	&__container {
+		display: flex;
+		@include adaptiveValue("gap", 50, 20, 0, 1500, 991.98);
+		@media (max-width: $mobile) {
+			flex-direction: column-reverse;
+		}
+	}
+	// .get-in-touch__image
+	&__image {
+		flex: 0 1 percent(585, 1220);
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		@media (max-width: $mobile) {
+			margin: 0 toRem(-15);
+		}
+	}
+	// .get-in-touch__body
+	&__body {
+		flex: 0 0 percent(585, 1220);
+		@media (max-width: $mobile) {
+			display: flex;
+			gap: toRem(15);
+		}
+		@media (max-width: em(550)) {
+			display: block;
+		}
+	}
+	// .get-in-touch__header
+	&__header {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 33, 20, 0, 1500, 767.98);
+		}
+		@media (max-width: $mobile) {
+			flex: 0 1 50%;
+		}
+	}
+	// .get-in-touch__label
+	&__label {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 16, 10, 0, 1500, 767.98);
+		}
+	}
+	// .get-in-touch__title
+	&__title {
+		line-height: 121%;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 11, 10, 0, 1500, 767.98);
+		}
+	}
+	// .get-in-touch__text
+	&__text {
+	}
+	// .get-in-touch__items
+	&__items {
+		display: flex;
+		flex-direction: column;
+		@include adaptiveValue("row-gap", 30, 15, 0, 1500, 767.98);
+		@media (max-width: $mobile) {
+			flex: 0 1 50%;
+		}
+	}
+	// .get-in-touch__item
+	&__item {
+	}
+}
+
+.item-get {
+	display: flex;
+	align-items: center;
+	@include adaptiveValue("column-gap", 19, 5, 0, 1500, 767.98);
+	// .item-get__image
+	&__image {
+		text-align: left;
+		flex: 0 0 toRem(68);
+		// width: toRem(68);
+		// height: toRem(68);
+		@include adaptiveValue("width", 68, 45, 0, 1500, 991.98);
+		@include adaptiveValue("height", 68, 45, 0, 1500, 991.98);
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	// .item-get__content
+	&__content {
+	}
+	// .item-get__descr
+	&__descr {
+		line-height: 135%;
+		@include adaptiveValue("font-size", 16, 14, 0, 1500, 991.98);
+	}
+	// .item-get__link
+	&__link {
+		color: $titleColor;
+		font-family: "Poppins";
+		@include adaptiveValue("font-size", 18, 16, 0, 1500, 991.98);
+		line-height: 150%;
+		text-decoration-color: transparent;
+		transition: all 0.4s;
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+				text-decoration-color: initial;
+			}
+		}
+	}
+}
+
+//========================================================================================================================================================
+// --CALL-BACK--
+//========================================================================================================================================================
+
+.call-back {
+	@include adaptiveValue("padding-bottom", 150, 40, 0, 1500, 767.98);
+	// .call-back__container
+	&__container {
+	}
+	// .call-back__header
+	&__header {
+		text-align: center;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 40, 20, 0, 1500, 767.98);
+		}
+	}
+	// .call-back__label
+	&__label {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 16, 10, 0, 1500, 767.98);
+		}
+	}
+	// .call-back__title
+	&__title {
+	}
+	// .call-back__form
+	&__form {
+	}
+}
+
+.form-call {
+	text-align: center;
+	// .form-call__body
+	&__body {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		@include adaptiveValue("column-gap", 35, 15, 0, 1500, 767.98);
+		@include adaptiveValue("row-gap", 28, 15, 0, 1500, 767.98);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 50, 25, 0, 1500, 767.98);
+		}
+		@media (max-width: $mobile) {
+			grid-template-columns: auto;
+		}
+	}
+	// .form-call__item
+	&__item {
+		border: toRem(1) solid #ddd;
+		@media (max-width: em(630)) {
+			grid-column: span 2;
+		}
+		// .form-call__item--textarea
+		&--textarea {
+			//min-height: toRem(222);
+			grid-column: span 2;
+			padding: toRem(21) toRem(40);
+			background-color: #f8f8f8;
+			@include adaptiveValue("min-height", 222, 150, 0, 1500, 767.98);
+		}
+	}
+	// .form-call__input
+	&__input {
+		background-color: #f8f8f8;
+		padding: toRem(21) toRem(40);
+		&::placeholder {
+			color: $titleColor;
+			@include adaptiveValue("font-size", 18, 16, 0, 1500, 991.98);
+			line-height: 122%;
+		}
+	}
+	// .form-call__button
+	&__button {
+		@media (max-width: $mobileSmall) {
+			width: 100%;
+		}
+	}
+}
+
+//========================================================================================================================================================

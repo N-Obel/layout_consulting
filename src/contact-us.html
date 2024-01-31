@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"WhiteCollar"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<section class="page__contact-us main-block">
+				<div class="main-block__content">
+					<div class="main-block__label block-title__label block-title__label--white">Contact Us</div>
+					<h1 class="main-block__title block-title__title block-title__title--white">Feel Free Reach Us</h1>
+				</div>
+				<img class="main-block__image" src="@img/contact-us/contact_bg.jpg" alt="Image">
+			</section>
+			<section class="page__get-in-touch get-in-touch">
+				<div class="get-in-touch__container">
+					<div class="get-in-touch__image">
+						<img src="@img/contact-us/contact_image.jpg" alt="Image">
+					</div>
+					<div class="get-in-touch__body">
+						<div class="get-in-touch__header block-title">
+							<div class="get-in-touch__label block-title__label">Let’s Talk</div>
+							<h2 class="get-in-touch__title block-title__title">Get in touch with us</h2>
+							<div class="get-in-touch__text">
+								<p>
+									Completely synergize resource taxing relationships via premier niche ynamically innovate state of the art customer service.
+								</p>
+							</div>
+						</div>
+						<div class="get-in-touch__items">
+							<div class="get-in-touch__item item-get">
+								<div class="item-get__image">
+									<img src="@img/contact-us/call.svg" alt="Image">
+								</div>
+								<div class="item-get__content">
+									<div class="item-get__descr">Have any question?</div>
+									<a href="tel:+01569896654" target="_blank" class="item-get__link">Free +01 569 896 654</a>
+								</div>
+							</div>
+							<div class="get-in-touch__item item-get">
+								<div class="item-get__image">
+									<img src="@img/contact-us/email.svg" alt="Image">
+								</div>
+								<div class="item-get__content">
+									<div class="item-get__descr">Write email</div>
+									<a href="mailto:info@whitecollar.com" target="_blank" class="item-get__link">Info@whitecollar.com</a>
+								</div>
+							</div>
+							<div class="get-in-touch__item item-get">
+								<div class="item-get__image">
+									<img src="@img/contact-us/location.svg" alt="Image">
+								</div>
+								<div class="item-get__content">
+									<div class="item-get__descr">Visit anytime</div>
+									<a href="https://www.google.com.ua/maps?hl=ru" target="_blank" class="item-get__link">King Street, Prior Lake, New York</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page__call-back call-back">
+				<div class="call-back__container">
+					<div class="call-back__header block-title">
+						<div class="call-back__label block-title__label">Contact Us</div>
+						<h2 class="call-back__title block-title__title">Request A Call Back !</h2>
+					</div>
+					<form data-no-validate class="call-back__form form-call" action="files/sendmail/sendmail.php" method="POST" id="form-call">
+						<div class="form-call__body">
+							<div class="form-call__item">
+								<input type="text" name="form[name]" required data-error="Error" placeholder="Your Name" class="form-call__input input">
+							</div>
+							<div class="form-call__item">
+								<input type="email" name="form[email]" required data-error="Error" placeholder="Email Address" class="form-call__input input">
+							</div>
+							<div class="form-call__item">
+								<input type="password" name="form[phone]" data-error="Error" placeholder="Phone Numberl" class="form-call__input input">
+							</div>
+							<div class="form-call__item">
+								<input type="text" name="form[subject]" data-error="Error" placeholder="Subject" class="form-call__input input">
+							</div>
+							<div class="form-call__item form-call__item--textarea">
+								<textarea autocomplete="off" name="form[message]" placeholder="Message..." data-error="Помилка" class="form-call__input form-call__item--textarea input"></textarea>
+							</div>
+						</div>
+						<button form="form-call" type="submit" class="form-call__button button">Send</button>
+					</form>
+
+				</div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>
